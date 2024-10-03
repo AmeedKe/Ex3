@@ -1,0 +1,99 @@
+/* Background for the entire screen */
+.root {
+    -fx-background-color: #121212; /* A deeper, darker gray background */
+}
+
+/* Button appearance */
+.menu-button {
+    -fx-background-color: #ff22e2; /* Bright orange background */
+    -fx-text-fill: #12277a; /* Light gray text instead of white */
+    -fx-font-size: 12px; /* Smaller text size */
+    -fx-font-family: "Montserrat", sans-serif; /* A modern, clean font */
+    -fx-padding: 4 8 4 8; /* Smaller padding around text */
+    -fx-background-radius: 4; /* Slightly smaller rounded corners */
+    -fx-border-color: #e619e3; /* Slightly darker orange border */
+    -fx-border-width: 1px;
+    -fx-cursor: hand; /* Hand cursor on hover */
+}
+/* Button appearance */
+.button {
+    -fx-background-color: #ff22e2; /* Bright orange background */
+    -fx-text-fill: #0033ff; /* Light gray text instead of white */
+    -fx-font-size: 12px; /* Smaller text size */
+    -fx-font-family: "Montserrat", sans-serif; /* A modern, clean font */
+    -fx-padding: 4 8 4 8; /* Smaller padding around text */
+    -fx-background-radius: 4; /* Slightly smaller rounded corners */
+    -fx-border-color: #e619e3; /* Slightly darker orange border */
+    -fx-border-width: 1px;
+    -fx-cursor: hand; /* Hand cursor on hover */
+}
+
+
+
+.background{
+    -fx-background-color: #00ff77;
+}
+
+/* Button hover effect */
+.button:hover {
+    -fx-background-color: rgba(255, 0, 221, 0.4); /* Lighter orange on hover */
+}
+
+/* Label appearance */
+.label {
+    -fx-text-fill: #093695; /* Lighter gray text for contrast */
+    -fx-font-size: 12px; /* Smaller text size */
+    -fx-font-family: "Roboto Slab", serif; /* A more distinct font */
+}
+
+
+/* TextField appearance */
+.text-field {
+    -fx-background-color: #2C2C2C; /* Slightly lighter dark gray background */
+    -fx-border-color: #444444; /* Dark gray border */
+    -fx-border-radius: 2; /* Slightly smaller rounded corners */
+    -fx-text-fill: #B0BEC5; /* Lighter gray text */
+    -fx-font-family: "Roboto Slab", serif; /* Matching font with labels */
+    -fx-padding: 4 8 4 8; /* Smaller padding inside text field */
+}
+
+/* VBox padding */
+.vbox {
+    -fx-padding: 8 16 8 16; /* Reduced padding inside VBox */
+    -fx-spacing: 8; /* Less space between elements in VBox */
+}
+
+/* ScrollPane appearance */
+.scroll-pane {
+    -fx-background-color: #1E1E1E; /* Darker background for ScrollPane */
+}
+
+/* BorderPane padding */
+.border-pane {
+    -fx-padding: 10px; /* Padding around the BorderPane */
+    -fx-background-color: #00ffa6;
+}
+
+/* StackPane padding */
+.stack-pane {
+    -fx-padding: 10px; /* Padding around the StackPane */
+}
+
+/* GridPane styling */
+.grid-pane {
+    -fx-background-color: #1C1C1C; /* Darker background for GridPane */
+    -fx-hgap: 5px; /* Horizontal gap between cells */
+    -fx-vgap: 5px; /* Vertical gap between cells */
+    -fx-padding: 10px; /* Padding around GridPane */
+    -fx-border-color: #444444; /* Border around the GridPane */
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px; /* Rounded corners for the GridPane */
+}
+
+
+
+
+/* Hover effect for buttons inside the GridPane */
+.grid-pane .button:hover {
+    -fx-background-color: #455A64; /* Lighter gray on hover */
+}

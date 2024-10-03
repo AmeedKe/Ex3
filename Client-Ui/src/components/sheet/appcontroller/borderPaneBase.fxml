@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane prefHeight="680.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.appcontroller.AppController">
+    <children>
+        <!-- Main ScrollPane to handle both width and height scrolling -->
+        <ScrollPane fx:id="scrollPane" fitToHeight="false" fitToWidth="false" prefHeight="680.0" prefWidth="920.0" pannable="true" hbarPolicy="AS_NEEDED" vbarPolicy="AS_NEEDED">
+            <content>
+                <BorderPane maxHeight="Infinity" maxWidth="Infinity" minHeight="0.0" minWidth="0.0" prefHeight="680.0" prefWidth="920.0" styleClass="background">
+                    <top>
+                        <!-- Include the header -->
+                        <fx:include source="../headerconroller/header.fxml" BorderPane.alignment="CENTER" />
+                    </top>
+                    <left>
+                        <!-- Include the left side (menu) -->
+                        <fx:include source="../leftsidecontroller/leftside.fxml" BorderPane.alignment="CENTER_LEFT" />
+                    </left>
+                    <center>
+                        <!-- The grid section is expanded to take up more space and scroll when necessary -->
+                        <ScrollPane fx:id="gridScrollPane" fitToHeight="false" fitToWidth="false" pannable="true" hbarPolicy="AS_NEEDED" vbarPolicy="AS_NEEDED">
+                            <fx:include source="../gridcontroller/grid.fxml" />
+                        </ScrollPane>
+                    </center>
+                    <bottom>
+                        <!-- Slider for dynamic cell value analysis -->
+                        <Slider fx:id="dynamicSlider" min="0" max="100" blockIncrement="1" visible="false"
+                                BorderPane.alignment="CENTER" prefWidth="800" />
+                    </bottom>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </BorderPane>
+            </content>
+        </ScrollPane>
+
+        <!-- Centered ProgressIndicator, initially hidden -->
+        <ProgressIndicator fx:id="progressIndicator" visible="false" maxHeight="50.0" maxWidth="50.0" />
+    </children>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+    <padding>
+        <Insets top="10.0" />
+    </padding>
+</StackPane>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="Infinity" maxWidth="Infinity" minHeight="0.0" minWidth="0.0" prefHeight="507.0" prefWidth="179.0" styleClass="left-side-vbox" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.leftsidecontroller.LeftSideController">
+   <children>
+      <VBox prefHeight="263.0" prefWidth="179.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="179.0" text="Grid Layout and Style Settings" textFill="#0b3ade">
+               <font>
+                  <Font name="FrankRuehl" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="-10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <VBox alignment="CENTER" prefHeight="0.0" prefWidth="179.0" spacing="10">
+               <children>
+                  <MenuButton fx:id="skinMenuButton1" alignment="CENTER" disable="true" layoutX="50.0" layoutY="10.0" popupSide="LEFT" prefHeight="26.0" prefWidth="160.0" styleClass="left-side-menubutton" text="Change App Skin">
+                     <items>
+                        <MenuItem onAction="#applyDefaultSkin" text="Default Skin" />
+                        <MenuItem onAction="#applySkin1" text="Skin 1" />
+                        <MenuItem onAction="#applySkin2" text="Skin 2" />
+                     </items>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </MenuButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="30.0" prefHeight="12.0" prefWidth="179.0" spacing="10">
+               <children>
+                  <MenuButton fx:id="changeCellStyleButton" alignment="CENTER" disable="true" mnemonicParsing="false" prefHeight="22.0" prefWidth="162.0" styleClass="left-side-menubutton" text="Change Cell Style">
+                     <items>
+                        <MenuItem fx:id="textColorMenuItem" text="Cell Text" />
+                        <MenuItem fx:id="backgroundColorMenuItem" text="Cell Background" />
+                        <!-- Adding reset style menu item -->
+                        <MenuItem fx:id="resetStyleMenuItem" text="Reset to Default" />
+                     </items>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </MenuButton>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="66.0" prefHeight="12.0" prefWidth="179.0" spacing="10">
+               <children>
+                  <MenuButton fx:id="columnAlignmentButton" alignment="CENTER" disable="true" mnemonicParsing="false" popupSide="LEFT" prefHeight="26.0" prefWidth="161.0" styleClass="left-side-menubutton" text="Column Alignment">
+                     <items>
+                        <MenuItem fx:id="leftAlignment" mnemonicParsing="false" text="Left" />
+                        <MenuItem fx:id="rightAlignment" mnemonicParsing="false" text="Right" />
+                        <MenuItem fx:id="centerAlignment" mnemonicParsing="false" text="Center" />
+                     </items>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </MenuButton>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="102.0" prefHeight="12.0" prefWidth="179.0" spacing="10">
+               <children>
+                  <MenuButton fx:id="rowColDimensionsButton" alignment="CENTER" disable="true" layoutX="50.0" layoutY="10.0" popupSide="LEFT" prefHeight="26.0" prefWidth="164.0" styleClass="left-side-menubutton" text="Change Row/Col Dimensions">
+                     <items>
+                        <MenuItem fx:id="changeRowHeightMenuItem" mnemonicParsing="false" text="Change Row Height" />
+                        <MenuItem fx:id="changeColumnWidthMenuItem" mnemonicParsing="false" text="Change Column Width" />
+                     </items>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </MenuButton>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="22.0" prefWidth="179.0">
+               <children>
+                  <Button fx:id="RowSortButton" alignment="CENTER" disable="true" mnemonicParsing="false" prefHeight="22.0" prefWidth="166.0" styleClass="left-side-menubutton" text="Row Sort">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="190.0" prefHeight="22.0" prefWidth="179.0">
+               <children>
+                  <Button fx:id="FilterButton" alignment="CENTER" disable="true" mnemonicParsing="false" prefHeight="22.0" prefWidth="166.0" styleClass="left-side-menubutton" text="Filter">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="262.0" prefWidth="179.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="229.0" text="Range Tools" textFill="#044ecf">
+               <font>
+                  <Font name="Bodoni MT" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <VBox alignment="CENTER" prefHeight="22.0" prefWidth="179.0">
+               <children>
+                  <Button fx:id="showRangeButton" alignment="CENTER" disable="true" mnemonicParsing="false" prefHeight="22.0" prefWidth="166.0" styleClass="left-side-menubutton" text="Show Range">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="39.0" prefHeight="22.0" prefWidth="179.0">
+               <children>
+                  <Button fx:id="deleteRangeButton" alignment="CENTER" disable="true" mnemonicParsing="false" prefHeight="22.0" prefWidth="166.0" styleClass="left-side-menubutton" text="Delete Range">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="39.0" prefHeight="22.0" prefWidth="179.0">
+               <children>
+                  <Button fx:id="addRangeButton" alignment="CENTER" disable="true" mnemonicParsing="false" prefHeight="22.0" prefWidth="166.0" styleClass="left-side-menubutton" text="Add Range">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="229.0" text="General" textFill="#044ecf">
+               <font>
+                  <Font name="Bodoni MT" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <VBox alignment="CENTER" prefHeight="5.0" prefWidth="179.0">
+               <children>
+                  <Button fx:id="chartDisplayButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" prefHeight="22.0" prefWidth="170.0" styleClass="left-side-menubutton" text="Chart Display">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="164.0" prefHeight="5.0" prefWidth="179.0">
+               <children>
+                  <Button id="dynamicAnalysisButton" fx:id="dynamicAnalysisButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" prefHeight="22.0" prefWidth="170.0" styleClass="left-side-menubutton" text="Dynamic Analysis">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <CheckBox fx:id="animationCheckbox" mnemonicParsing="false" text="cells animation" disable="true">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </CheckBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

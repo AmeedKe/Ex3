@@ -1,0 +1,79 @@
+/* General Root Styling */
+.root {
+    -fx-background-color: #f7f7f7; /* Light off-white background */
+}
+
+/* Left-Side VBox Styling */
+.left-side-vbox {
+    -fx-background-color: #f5f5f5; /* Light background for the left side */
+    -fx-padding: 12 20 12 20; /* Add padding inside VBox */
+    -fx-spacing: 10; /* Space between elements in VBox */
+    -fx-border-color: #dcdcdc; /* Light gray border */
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px; /* Rounded corners */
+}
+
+/* TextField Styling for Left Side */
+.left-side-textfield {
+    -fx-background-color: #E0E0E0; /* Light gray background */
+    -fx-border-color: #B0BEC5; /* Light gray border */
+    -fx-border-radius: 3; /* Rounded corners */
+    -fx-text-fill: #333333; /* Dark gray text */
+    -fx-font-family: "Roboto Slab", serif; /* Matching font with labels */
+    -fx-font-weight: bold; /* Make text bold */
+    -fx-padding: 6 12 6 12; /* Padding inside text field */
+}
+
+/* Common Button Styling for All Buttons */
+.button {
+    -fx-background-color: #FF5722; /* Bright orange background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 10px; /* Consistent small text size */
+    -fx-font-weight: bold; /* Bold text */
+    -fx-font-family: "Montserrat", sans-serif; /* Modern, clean font */
+    -fx-padding: 6 12 6 12; /* Padding around text */
+    -fx-background-radius: 5; /* Rounded corners */
+    -fx-border-color: #E64A19; /* Slightly darker orange border */
+    -fx-border-width: 1px;
+    -fx-cursor: hand; /* Hand cursor on hover */
+}
+
+
+/* Button Hover Effect for All Buttons */
+.button:hover {
+    -fx-background-color: #FF7043; /* Lighter orange on hover */
+
+}
+
+/* Specific Styling for Change Dimensions Button */
+#rowColDimensionsButton {
+    -fx-font-size: 8px; /* Specific text size for Change Dimensions button */
+    -fx-text-fill: white; /* White text */
+}
+
+/* MenuButton Styling (inherits from the common .button styling) */
+.menu-button {
+    -fx-background-color: #FF5722; /* Bright orange background */
+}
+
+/* GridPane Styling */
+#gridPane {
+    -fx-background-color: #f0f0f0; /* Light gray background for GridPane */
+    -fx-hgap: 5px; /* Horizontal gap between cells */
+    -fx-vgap: 5px; /* Vertical gap between cells */
+    -fx-padding: 10px; /* Padding around GridPane */
+    -fx-border-color: #B0BEC5; /* Light gray border around the GridPane */
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px; /* Rounded corners for the GridPane */
+}
+
+/* GridPane Button Specific Styling */
+#gridPane .button {
+    -fx-background-color: #81C784; /* Light green background for grid buttons */
+    -fx-border-color: #66BB6A; /* Slightly darker green border */
+}
+
+/* GridPane Button Hover Effect */
+#gridPane .button:hover {
+    -fx-background-color: #A5D6A7; /* Lighter green on hover */
+}
