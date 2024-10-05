@@ -2,6 +2,8 @@ package servlets;
 
 
 import java.io.IOException;
+
+import constants.Constants;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -11,7 +13,6 @@ import utils.ServletUtils;
 
 import utils.SessionUtils;
 
-import static constants.Constants.USERNAME;
 
 
 public class LoginServlet extends HttpServlet {

@@ -1,20 +1,11 @@
     package components.sheet.appcontroller;
 
-    import components.login.LoginController;
-    import components.sheet.gridcontroller.GridController;
-    import components.sheet.headerconroller.HeaderController;
-    import components.sheet.leftsidecontroller.LeftSideController;
+    import login.LoginController;
     import javafx.application.Application;
     import javafx.fxml.FXMLLoader;
     import javafx.scene.Parent;
     import javafx.scene.Scene;
-    import javafx.scene.control.Label;
-    import javafx.scene.control.ScrollPane;
-    import javafx.scene.layout.BorderPane;
-    import javafx.scene.layout.StackPane;
     import javafx.stage.Stage;
-
-    import java.net.URL;
 
     public class Program2 extends Application {
         public static void main(String[] args) {
@@ -87,7 +78,7 @@ public void start(Stage primaryStage) throws Exception {
     primaryStage.setTitle("Login");
 
     // Load login FXML
-    FXMLLoader loader = new FXMLLoader(getClass().getResource("/components/login/login.fxml"));
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("/login/login.fxml"));
     Parent root = loader.load();
 
     // Get controller and pass primaryStage

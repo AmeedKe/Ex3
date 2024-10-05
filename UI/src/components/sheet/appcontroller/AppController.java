@@ -1,7 +1,7 @@
 package components.sheet.appcontroller;
 
 import components.dashboard.DashboardController;
-import components.login.LoginController;
+import login.LoginController;
 import components.sheet.gridcontroller.GridController;
 import components.sheet.headerconroller.HeaderController;
 import components.sheet.leftsidecontroller.LeftSideController;
@@ -11,10 +11,7 @@ import engineimpl.EngineImpl;
 import javafx.animation.*;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -22,7 +19,6 @@ import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.Slider;
 import javafx.scene.effect.Glow;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -33,10 +29,8 @@ import spreadsheet.cell.impl.CellImpl;
 import spreadsheet.impl.SheetImpl;
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
-import javafx.util.Duration;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.Map;
 import java.util.Set;
 

@@ -1,7 +1,8 @@
-package components.login;
+package login;
 
 import com.sun.istack.NotNull;
 import components.sheet.appcontroller.AppController;
+import httputils.HttpClientUtil;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -81,7 +82,7 @@ public class LoginController {
                 .toString();
 
         // Send asynchronous login request to the server
-        chat.client.util.http.HttpClientUtil.runAsync(finalUrl, new Callback() {
+       HttpClientUtil.runAsync(finalUrl, new Callback() {
             @Override
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
                 Platform.runLater(() -> errorMessageProperty.set("Connection failed: " + e.getMessage()));
