@@ -36,14 +36,13 @@ public class LoginController {
     @FXML
     private Button loginButton;
 
-
-
     private AppController mainController;  // Reference to the main controller
     private final StringProperty errorMessageProperty = new SimpleStringProperty();  // Property for error messages
     private Stage primaryStage;  // To handle stage switching
 
     @FXML
     public void initialize() {
+
         // Bind error messages to the label in the UI
         errorMessageLabel.textProperty().bind(errorMessageProperty);
 
@@ -58,47 +57,42 @@ public class LoginController {
             // Enable the button if the new value is not empty, disable it otherwise
             loginButton.setDisable(newValue.trim().isEmpty());
         });
-    }
 
-    public void setMainController(AppController mainController) {
-        this.mainController = mainController;
-    }
+        // Handle the login button click using lambda
+        loginButton.setOnAction(event -> {
+            String userName = userNameTextField.getText();
 
-    // Triggered when the login button is clicked
-    @FXML
-    private void loginButtonClicked(ActionEvent event) {
-        String userName = userNameTextField.getText();
-
-        if (userName.isEmpty()) {
-            errorMessageProperty.set("Username cannot be empty.");
-            return;
-        }
-
-        // Build the login URL with the username as a query parameter
-        String finalUrl = HttpUrl.parse(LOGIN_PAGE)
-                .newBuilder()
-                .addQueryParameter("username", userName)
-                .build()
-                .toString();
-
-        // Send asynchronous login request to the server
-       HttpClientUtil.runAsync(finalUrl, new Callback() {
-            @Override
-            public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                Platform.runLater(() -> errorMessageProperty.set("Connection failed: " + e.getMessage()));
+            if (userName.isEmpty()) {
+                errorMessageProperty.set("Username cannot be empty.");
+                return;
             }
 
-            @Override
-            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-                if (response.code() != 200) {
-                    // Handle error response
-                    String responseBody = response.body().string();
-                    Platform.runLater(() -> errorMessageProperty.set("Login failed: " + responseBody));
-                } else {
-                    // Handle successful login
-                    Platform.runLater(() -> switchToDashboard(userName));
+            // Build the login URL with the username as a query parameter
+            String finalUrl = HttpUrl.parse(LOGIN_PAGE)
+                    .newBuilder()
+                    .addQueryParameter("username", userName)
+                    .build()
+                    .toString();
+
+            // Send asynchronous login request to the server
+            HttpClientUtil.runAsync(finalUrl, new Callback() {
+                @Override
+                public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                    Platform.runLater(() -> errorMessageProperty.set("Connection failed: " + e.getMessage()));
                 }
-            }
+
+                @Override
+                public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                    if (response.code() != 200) {
+                        // Handle error response
+                        String responseBody = response.body().string();
+                        Platform.runLater(() -> errorMessageProperty.set("Login failed: " + responseBody));
+                    } else {
+                        // Handle successful login
+                        Platform.runLater(() -> switchToDashboard(userName));
+                    }
+                }
+            });
         });
     }
 
